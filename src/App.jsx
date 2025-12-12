@@ -9,7 +9,7 @@ import AppRouter from './router'
 import Navbar from './components/Navbar'
 import LoginPage from './pages/LoginPage'
 import ErrorBoundary from './components/ErrorBoundary'
-import { AIChatbot } from './components/AIChatbot'
+import Chatbot from './components/Chatbot'
 
 const AppContent = () => {
   const { user, loading } = useAuth();
@@ -35,7 +35,7 @@ const AppContent = () => {
     <div className="App">
       <Navbar />
       <AppRouter />
-      <AIChatbot />
+      <Chatbot />
     </div>
   );
 };
