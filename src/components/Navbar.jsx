@@ -7,11 +7,10 @@ const Navbar = () => {
   const { completedChallenges } = useApp();
 
   const navItems = [
-    { path: '/', name: 'Home', icon: '🏠' },
-    { path: '/tutorial', name: 'Tutorial', icon: '📚' },
-    { path: '/challenges', name: 'Challenges', icon: '🏆' },
-    { path: '/playground', name: 'Playground', icon: '🎨' },
-    { path: '/about', name: 'About', icon: 'ℹ️' },
+    { path: '/', name: 'Home' },
+    { path: '/tutorial', name: 'Tutorial' },
+    { path: '/challenges', name: 'Challenges' },
+    { path: '/playground', name: 'Playground' },
   ];
 
   const isActive = (path) => {
@@ -32,7 +31,7 @@ const Navbar = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                CADemyAI
+                Cadara
               </h1>
               <p className="text-sm text-gray-500 font-medium">Learn, Design, Assist</p>
             </div>
@@ -50,9 +49,6 @@ const Navbar = () => {
                     : 'hover:bg-gray-50 text-gray-600 hover:text-gray-800'
                 }`}
               >
-                <span className="text-lg group-hover:scale-110 transition-transform duration-200">
-                  {item.icon}
-                </span>
                 <span className="text-sm">{item.name}</span>
                 {item.name === 'Challenges' && completedChallenges.length > 0 && (
                   <span className="bg-gradient-to-r from-green-400 to-green-500 text-white text-xs px-2 py-1 rounded-full font-bold shadow-sm animate-bounce-subtle">
@@ -91,7 +87,6 @@ const Navbar = () => {
                     : 'hover:bg-gray-50 text-gray-600'
                 }`}
               >
-                <span className="text-lg">{item.icon}</span>
                 <span className="font-medium">{item.name}</span>
                 {item.name === 'Challenges' && completedChallenges.length > 0 && (
                   <span className="ml-auto bg-gradient-to-r from-green-400 to-green-500 text-white text-xs px-2 py-1 rounded-full font-bold">

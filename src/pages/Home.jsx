@@ -3,244 +3,191 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse animation-delay-4000"></div>
+      </div>
+
       {/* Hero Section */}
-      <div className="container mx-auto px-6 py-20">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-full text-indigo-700 font-medium text-sm mb-6 animate-bounce-subtle">
-            <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2 animate-pulse"></span>
-            Welcome to the Future of CAD Learning
+      <div className="relative z-10 container mx-auto px-6 py-16">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-full border border-purple-500/30 text-purple-300 font-medium text-sm mb-8 animate-bounce">
+            <span className="w-2 h-2 bg-purple-400 rounded-full mr-3 animate-ping"></span>
+            Next-Gen CAD Learning Platform
           </div>
           
-          <h1 className="text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              CADemyAI
+          <h1 className="text-8xl font-black mb-8 leading-none">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
+              Cadara
             </span>
           </h1>
           
-          <p className="text-2xl font-semibold text-indigo-600 mb-4">
-            Learn, Design, Assist.
+          <p className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text mb-6">
+            Design • Learn • Impact
           </p>
           
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-10 leading-relaxed">
-            Master 3D modeling and CAD design through gamified challenges focused on assistive technology. 
-            Build empathy-driven designs that make a real-world impact while learning professional CAD skills.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+            Revolutionary 3D modeling platform combining gamified learning with assistive technology design. 
+            Build real-world solutions while mastering professional CAD skills.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-8">
             <Link 
               to="/playground" 
-              className="group inline-flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-5 rounded-2xl font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg shadow-2xl hover:shadow-purple-500/25 transform hover:-translate-y-2 hover:scale-105"
             >
-              <span className="mr-2 text-xl group-hover:scale-110 transition-transform duration-200">🎮</span>
-              Start Creating
-              <div className="ml-2 w-2 h-2 bg-white rounded-full opacity-75 group-hover:animate-ping"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <span className="relative flex items-center">
+                <span className="mr-3 text-2xl">🚀</span>
+                Launch Playground
+              </span>
             </Link>
             <Link 
               to="/challenges" 
-              className="group inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-2xl font-semibold hover:from-amber-600 hover:to-orange-700 transition-all duration-300 text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+              className="group relative inline-flex items-center justify-center bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-10 py-5 rounded-2xl font-bold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 text-lg shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-2 hover:scale-105"
             >
-              <span className="mr-2 text-xl group-hover:scale-110 transition-transform duration-200">🏆</span>
-              Take Challenges
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <span className="relative flex items-center">
+                <span className="mr-3 text-2xl">⚡</span>
+                Start Challenges
+              </span>
             </Link>
           </div>
           
-          <p className="text-gray-500">
+          <Link to="/tutorial" className="inline-flex items-center text-gray-400 hover:text-white font-medium transition-colors duration-200 group">
             New to CAD? 
-            <Link to="/tutorial" className="text-indigo-600 hover:text-indigo-700 font-semibold ml-1 hover:underline transition-colors duration-200">
-              Start with our interactive tutorial →
-            </Link>
-          </p>
+            <span className="ml-2 text-cyan-400 group-hover:text-cyan-300">Begin Tutorial</span>
+            <span className="ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
+          </Link>
         </div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
-          <div className="group bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-            <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-              <span className="text-3xl">♿</span>
+          <div className="group relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 text-center hover:bg-white/10 transition-all duration-500 hover:-translate-y-4 border border-white/10 hover:border-purple-500/50">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-pink-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative z-10">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <span className="text-3xl">♿</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Assistive Tech Focus</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Design inclusive solutions that empower people with disabilities through thoughtful engineering and empathy-driven design.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-gray-800">Assistive Technology Focus</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Learn to design for accessibility and inclusion. Create tools that help people with disabilities 
-              live more independently through thoughtful engineering.
-            </p>
           </div>
 
-          <div className="group bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-              <span className="text-3xl">🎯</span>
+          <div className="group relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 text-center hover:bg-white/10 transition-all duration-500 hover:-translate-y-4 border border-white/10 hover:border-cyan-500/50">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-blue-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative z-10">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <span className="text-3xl">🎯</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Gamified Learning</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Progress through immersive challenges with real-time feedback, achievements, and skill progression systems.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-gray-800">Gamified Learning</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Progress through carefully designed challenges that build your skills step by step. 
-              Earn achievements and unlock new tools as you advance.
-            </p>
           </div>
 
-          <div className="group bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-            <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-              <span className="text-3xl">🔧</span>
+          <div className="group relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 text-center hover:bg-white/10 transition-all duration-500 hover:-translate-y-4 border border-white/10 hover:border-pink-500/50">
+            <div className="absolute inset-0 bg-gradient-to-br from-pink-600/10 to-purple-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative z-10">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <span className="text-3xl">🔧</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Professional Tools</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Master industry-standard CAD operations with Three.js-powered 3D modeling, Boolean operations, and precision tools.
+              </p>
             </div>
-            <h3 className="text-xl font-bold mb-4 text-gray-800">Professional CAD Tools</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Work with real 3D modeling tools including Boolean operations, precise transformations, 
-              and material systems powered by Three.js.
-            </p>
           </div>
         </div>
 
         {/* Learning Paths */}
-        <div className="bg-white rounded-3xl shadow-xl p-10 mb-20 border border-gray-100">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Choose Your Learning Path</h2>
-            <p className="text-xl text-gray-600">Tailored experiences for every skill level</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Link to="/tutorial" className="group block p-8 border-2 border-gray-200 rounded-2xl hover:border-indigo-300 hover:bg-gradient-to-br hover:from-indigo-50 hover:to-blue-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <span className="text-3xl">📚</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Tutorial Mode</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Step-by-step guided training for beginners. Learn CAD basics with interactive lessons.
-                </p>
-                <div className="mt-4 inline-flex items-center text-indigo-600 font-medium group-hover:text-indigo-700">
-                  Start Learning
-                  <span className="ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/challenges" className="group block p-8 border-2 border-gray-200 rounded-2xl hover:border-amber-300 hover:bg-gradient-to-br hover:from-amber-50 hover:to-orange-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <span className="text-3xl">🏆</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Challenge Mode</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Mission-based tasks focused on assistive technology. Progress from beginner to advanced.
-                </p>
-                <div className="mt-4 inline-flex items-center text-amber-600 font-medium group-hover:text-amber-700">
-                  Take Challenge
-                  <span className="ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/playground" className="group block p-8 border-2 border-gray-200 rounded-2xl hover:border-purple-300 hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <span className="text-3xl">🎨</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-800">Playground Mode</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Open-ended sandbox with all tools unlocked. Perfect for experimentation and creativity.
-                </p>
-                <div className="mt-4 inline-flex items-center text-purple-600 font-medium group-hover:text-purple-700">
-                  Start Creating
-                  <span className="ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-
-        {/* Example Challenges Preview */}
-        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl shadow-2xl p-10 text-white mb-20 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-32 translate-x-32"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-5 rounded-full translate-y-24 -translate-x-24"></div>
-          
+        <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-12 mb-20 border border-white/20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-cyan-600/5 rounded-3xl"></div>
           <div className="relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">Example Challenges</h2>
-              <p className="text-xl opacity-90">Real-world projects that make a difference</p>
+              <h2 className="text-5xl font-bold mb-4">Choose Your Path</h2>
+              <p className="text-xl text-gray-300">Tailored experiences for every skill level</p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                <div className="text-3xl mb-4">🥄</div>
-                <h3 className="text-xl font-bold mb-3">Ergonomic Spoon</h3>
-                <p className="text-sm opacity-90 mb-4 leading-relaxed">
-                  Design an easy-grip spoon for users with arthritis. Learn about ergonomics and accessibility.
-                </p>
-                <div className="text-xs opacity-75 bg-white bg-opacity-10 rounded-lg px-3 py-2">
-                  Skills: Resize, rotate, grip ergonomics
+              <Link to="/tutorial" className="group relative block p-8 bg-white/5 backdrop-blur-sm rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/10 hover:border-green-500/50 hover:shadow-2xl hover:shadow-green-500/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 to-emerald-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <span className="text-3xl">📚</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Tutorial Mode</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Interactive guided training for beginners with step-by-step CAD fundamentals.
+                  </p>
+                  <div className="inline-flex items-center text-green-400 font-medium group-hover:text-green-300">
+                    Start Learning
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  </div>
                 </div>
-              </div>
+              </Link>
 
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                <div className="text-3xl mb-4">📱</div>
-                <h3 className="text-xl font-bold mb-3">One-Handed Phone Stand</h3>
-                <p className="text-sm opacity-90 mb-4 leading-relaxed">
-                  Create a stable phone stand operable with one hand. Focus on stability and ease of use.
-                </p>
-                <div className="text-xs opacity-75 bg-white bg-opacity-10 rounded-lg px-3 py-2">
-                  Skills: Align, group, Boolean operations
+              <Link to="/challenges" className="group relative block p-8 bg-white/5 backdrop-blur-sm rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/10 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-blue-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <span className="text-3xl">🏆</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Challenge Mode</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Mission-based assistive technology projects from beginner to advanced levels.
+                  </p>
+                  <div className="inline-flex items-center text-cyan-400 font-medium group-hover:text-cyan-300">
+                    Take Challenge
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  </div>
                 </div>
-              </div>
+              </Link>
 
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                <div className="text-3xl mb-4">🧼</div>
-                <h3 className="text-xl font-bold mb-3">Adaptive Soap Holder</h3>
-                <p className="text-sm opacity-90 mb-4 leading-relaxed">
-                  Design a soap holder with finger slots for users with weak grip. Consider drainage and safety.
-                </p>
-                <div className="text-xs opacity-75 bg-white bg-opacity-10 rounded-lg px-3 py-2">
-                  Skills: Position, Boolean subtract, edge design
+              <Link to="/playground" className="group relative block p-8 bg-white/5 backdrop-blur-sm rounded-2xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/10 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/20">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <span className="text-3xl">🎨</span>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">Playground Mode</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    Open-ended sandbox with all tools unlocked for unlimited creativity and experimentation.
+                  </p>
+                  <div className="inline-flex items-center text-purple-400 font-medium group-hover:text-purple-300">
+                    Start Creating
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Learning Benefits */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Why CADemyAI?</h2>
-          <p className="text-xl text-gray-600 mb-12">Empowering the next generation of inclusive designers</p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="group text-center p-6 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-2xl">💡</span>
-              </div>
-              <h3 className="font-bold mb-3 text-gray-800">Empathy-Driven Design</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Learn to design with users' needs in mind, especially those with disabilities
-              </p>
-            </div>
 
-            <div className="group text-center p-6 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-2xl">⚙️</span>
-              </div>
-              <h3 className="font-bold mb-3 text-gray-800">Engineering Principles</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Master modularity, symmetry, constraints, and other core engineering concepts
-              </p>
-            </div>
 
-            <div className="group text-center p-6 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-2xl">🎮</span>
-              </div>
-              <h3 className="font-bold mb-3 text-gray-800">Accessible Learning</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Makes CAD fun and approachable, even for absolute beginners
-              </p>
-            </div>
-
-            <div className="group text-center p-6 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-2xl">🌍</span>
-              </div>
-              <h3 className="font-bold mb-3 text-gray-800">Real-World Impact</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Bridge technical skills with meaningful solutions that help people
-              </p>
-            </div>
-          </div>
+        {/* Footer CTA */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join thousands of designers creating assistive technology that makes a real difference in people's lives.
+          </p>
+          <Link 
+            to="/playground" 
+            className="group relative inline-flex items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-6 rounded-2xl font-bold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 text-xl shadow-2xl hover:shadow-indigo-500/25 transform hover:-translate-y-2"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+            <span className="relative flex items-center">
+              <span className="mr-3 text-2xl">✨</span>
+              Begin Your Journey
+            </span>
+          </Link>
         </div>
       </div>
     </div>
